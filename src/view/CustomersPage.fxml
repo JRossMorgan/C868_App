@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersPageController">
+   <children>
+      <Label layoutX="12.0" layoutY="15.0" prefHeight="43.0" prefWidth="132.0" text="Customers" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customersTable" layoutX="25.0" layoutY="83.0" prefHeight="200.0" prefWidth="544.0">
+        <columns>
+          <TableColumn fx:id="customerId" prefWidth="30.0" text="ID" />
+          <TableColumn fx:id="customerName" prefWidth="98.0" text="Name" />
+            <TableColumn fx:id="customerAddress" prefWidth="97.0" text="Address" />
+            <TableColumn fx:id="postalCode" prefWidth="73.0" text="Postal Code" />
+            <TableColumn fx:id="custPhone" prefWidth="68.0" text="Phone" />
+            <TableColumn fx:id="custDivision" prefWidth="94.0" text="Division" />
+            <TableColumn fx:id="custCountry" prefWidth="83.0" text="Country" />
+        </columns>
+      </TableView>
+      <Button fx:id="modCustomer" layoutX="245.0" layoutY="300.0" mnemonicParsing="false" onAction="#onMod" text="Modify" />
+      <Button fx:id="deleteCustomer" layoutX="333.0" layoutY="300.0" mnemonicParsing="false" onAction="#onDelete" text="Delete" />
+      <Button fx:id="addCustomer" layoutX="163.0" layoutY="300.0" mnemonicParsing="false" onAction="#onAdd" text="Add" />
+      <DialogPane fx:id="custDialog" layoutX="226.0" layoutY="417.0" prefHeight="140.0" prefWidth="413.0" />
+      <Button fx:id="home" layoutX="430.0" layoutY="300.0" mnemonicParsing="false" onAction="#onHome" text="Home" />
+      <Button fx:id="anniversary" contentDisplay="CENTER" layoutX="78.0" layoutY="417.0" mnemonicParsing="false" onAction="#onReport" prefHeight="57.0" prefWidth="120.0" text="Generate Anniversaries" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+        </children>
+</AnchorPane>

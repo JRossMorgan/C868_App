@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.UpdateCustomerController"
+            prefHeight="600.0" prefWidth="800.0">
+    <children>
+        <TextField fx:id="updateID" editable="false" layoutX="110.0" layoutY="123.0" prefHeight="25.0" prefWidth="40.0" />
+        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="17.0" prefHeight="46.0" prefWidth="161.0" text="Update Customer" textAlignment="CENTER">
+            <font>
+                <Font name ="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="37.0" layoutY="127.0" text="customer ID" />
+        <TextField fx:id="updateName" layoutX="108.0" layoutY="157.0" />
+        <TextField fx:id="updateAddress" layoutX="108.0" layoutY="200.0" />
+        <TextField fx:id="updatePostal" layoutX="108.0" layoutY="239.0" />
+        <TextField fx:id="updatePhone" layoutX="108.0" layoutY="277.0" />
+        <Label layoutX="56.0" layoutY="161.0" text="Name" />
+        <Label layoutX="56.0" layoutY="204.0" text="Address" />
+        <Label layoutX="38.0" layoutY="243.0" text="Postal Code" />
+        <Label layoutX="16.0" layoutY="281.0" text="Phone Number" />
+        <ComboBox fx:id="updateCountry" layoutX="335.0" layoutY="157.0" onAction="#onSelect" prefWidth="150.0" promptText="Country" />
+        <ComboBox fx:id="updateDivision" layoutX="335.0" layoutY="231.0" prefWidth="150.0" promptText="Division" />
+        <Button fx:id="updateSave" layoutX="358.0" layoutY="332.0" mnemonicParsing="false" onAction="#onUpdate" text="Save" />
+        <Button fx:id="updateCancel" layoutX="443.0" layoutY="332.0" mnemonicParsing="false" onAction="#onUpdateCancel" text="Cancel" />
+        <DialogPane fx:id="updateDialog" layoutX="219.0" layoutY="63.0" />
+    </children>
+
+</AnchorPane>

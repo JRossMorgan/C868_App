@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="667.0" prefWidth="814.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsController">
+   <children>
+      <Label alignment="CENTER" layoutX="46.0" layoutY="36.0" prefHeight="44.0" prefWidth="110.0" text="Appointments">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="20.0" layoutY="80.0" prefHeight="348.0" prefWidth="557.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="byMonth" text="By Month">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appMonth" layoutY="59.0" prefHeight="197.0" prefWidth="557.0">
+                          <columns>
+                            <TableColumn fx:id="idByMonth" prefWidth="37.0" text="ID" />
+                            <TableColumn fx:id="titleByMonth" prefWidth="49.0" text="Title" />
+                              <TableColumn fx:id="descByMonth" prefWidth="53.0" text="Decription" />
+                              <TableColumn fx:id="locByMonth" prefWidth="46.0" text="Location" />
+                              <TableColumn fx:id="contactByMonth" prefWidth="39.0" text="Contact" />
+                              <TableColumn fx:id="typeByMonth" prefWidth="47.0" text="Type" />
+                              <TableColumn fx:id="startByMonth" prefWidth="53.0" text="Start" />
+                              <TableColumn fx:id="endByMonth" prefWidth="63.0" text="End" />
+                              <TableColumn fx:id="customerByMonth" prefWidth="93.0" text="Customer ID" />
+                              <TableColumn fx:id="userByMonth" prefWidth="76.0" text="User Id" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="monthBox" layoutX="141.0" layoutY="23.0" onAction="#onChooseMonth" prefWidth="150.0" promptText="Choose Month" />
+                        <Button fx:id="addMonth" layoutX="130.0" layoutY="268.0" mnemonicParsing="false" onAction="#onAddMonth" text="Add" />
+                        <Button fx:id="updateMonth" layoutX="227.0" layoutY="268.0" mnemonicParsing="false" onAction="#onUpdateMonth" text="Update" />
+                        <Button fx:id="deleteMonth" layoutX="321.0" layoutY="268.0" mnemonicParsing="false" onAction="#onDeleteMonth" text="Delete" />
+                     </children></AnchorPane>
+
+            </content>
+          </Tab>
+          <Tab fx:id="byWeek" text="By Week">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="appWeek" layoutY="60.0" prefHeight="200.0" prefWidth="557.0">
+                          <columns>
+                            <TableColumn fx:id="idByWeek" prefWidth="44.0" text="ID" />
+                            <TableColumn fx:id="titleByWeek" prefWidth="33.0" text="Title" />
+                              <TableColumn fx:id="descByWeek" prefWidth="72.0" text="Description" />
+                              <TableColumn fx:id="locByWeek" prefWidth="63.0" text="Location" />
+                              <TableColumn fx:id="contactByWeek" prefWidth="37.0" text="Contact" />
+                              <TableColumn fx:id="typeByWeek" prefWidth="50.0" text="Type" />
+                              <TableColumn fx:id="startByWeek" prefWidth="71.0" text="Start" />
+                              <TableColumn fx:id="endByWeek" prefWidth="50.0" text="End" />
+                              <TableColumn fx:id="customerByWeek" prefWidth="88.0" text="Customer Id" />
+                              <TableColumn fx:id="userByWeek" prefWidth="48.0" text="User Id" />
+                          </columns>
+                        </TableView>
+                        <DatePicker fx:id="chooseWeek" layoutX="138.0" layoutY="21.0" onAction="#onChooseWeek" promptText="Choose a Week" />
+                        <Button fx:id="addWeek" layoutX="130.0" layoutY="268.0" mnemonicParsing="false" onAction="#onAddWeek" text="Add" />
+                        <Button fx:id="updateWeek" layoutX="227.0" layoutY="268.0" mnemonicParsing="false" onAction="#onUpdateWeek" text="Update" />
+                        <Button fx:id="deleteWeek" layoutX="321.0" layoutY="268.0" mnemonicParsing="false" onAction="#onDeleteWeek" text="Delete" />
+
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+       <ComboBox fx:id="reportMonth" layoutX="54.0" layoutY="463.0" prefWidth="150.0" promptText="Choose Month" />
+       <ComboBox fx:id="reportType" layoutX="54.0" layoutY="507.0" prefWidth="150.0" promptText="Choose Type" />
+       <Button fx:id="generateReport" layoutX="77.0" layoutY="547.0" mnemonicParsing="false" onAction="#onGenerate" text="Generate Report" />
+
+       <DialogPane fx:id="appDialog" layoutX="245.0" layoutY="428.0" prefHeight="208.0" prefWidth="418.0" />
+      <Button fx:id="appHome" layoutX="80.0" layoutY="612.0" mnemonicParsing="false" onAction="#onHome" text="Home" />
+   </children>
+</AnchorPane>

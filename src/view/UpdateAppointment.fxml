@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentController">
+   <children>
+      <Label layoutX="22.0" layoutY="21.0" prefHeight="40.0" prefWidth="187.0" text="Update Appointment">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="updateTitle" layoutX="90.0" layoutY="130.0" />
+      <TextField fx:id="updateDescription" layoutX="90.0" layoutY="186.0" />
+      <TextField fx:id="updateLocation" layoutX="90.0" layoutY="242.0" />
+      <TextField fx:id="updateType" layoutX="90.0" layoutY="300.0" />
+      <Label layoutX="29.0" layoutY="134.0" text="Title" />
+      <Label layoutX="10.0" layoutY="190.0" text="Description" />
+      <Label layoutX="18.0" layoutY="246.0" text="Location" />
+      <Label layoutX="29.0" layoutY="304.0" text="Type" />
+      <Label layoutX="19.0" layoutY="364.0" text="Customer ID" />
+      <Label layoutX="29.0" layoutY="423.0" text="User ID" />
+      <TextField fx:id="updateId" editable="false" layoutX="90.0" layoutY="94.0" prefHeight="25.0" prefWidth="39.0" />
+      <Label layoutX="28.0" layoutY="98.0" text="ID" />
+      <ComboBox fx:id="updateContact" layoutX="400.0" layoutY="130.0" prefWidth="150.0" />
+      <ComboBox fx:id="updateStart" layoutX="400.0" layoutY="242.0" prefWidth="150.0" />
+      <Label layoutX="307.0" layoutY="134.0" text="Contact" />
+      <Label layoutX="266.0" layoutY="190.0" text="Appointment Date" />
+      <ComboBox fx:id="updateEnd" layoutX="400.0" layoutY="300.0" prefWidth="150.0" />
+      <DatePicker fx:id="updateDate" layoutX="388.0" layoutY="186.0" onAction="#onSelect" />
+      <Label layoutX="315.0" layoutY="246.0" text="Start Time" />
+      <Label layoutX="315.0" layoutY="304.0" text="End Time" />
+      <ComboBox fx:id="updateCustomer" layoutX="99.0" layoutY="360.0" prefWidth="150.0" />
+      <ComboBox fx:id="updateUser" layoutX="99.0" layoutY="419.0" prefWidth="150.0" />
+      <Button fx:id="updateSave" layoutX="174.0" layoutY="501.0" mnemonicParsing="false" onAction="#onUpdateSave" text="Save" />
+      <Button fx:id="updateCancel" layoutX="316.0" layoutY="501.0" mnemonicParsing="false" onAction="#onUpdateCancel" text="Cancel" />
+      <DialogPane fx:id="updateDialog" layoutX="295.0" layoutY="359.0" prefHeight="125.0" prefWidth="360.0" />
+   </children>
+</AnchorPane>
